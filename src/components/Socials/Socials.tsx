@@ -1,3 +1,4 @@
+import classnames from "classnames";
 import GithubIcon from "../../assets/icons/github.svg?react";
 import InstagramIcon from "../../assets/icons/instagram.svg?react";
 import LinkedIn from "../../assets/icons/linkedin.svg?react";
@@ -31,8 +32,8 @@ const SocialIcons: Record<keyof typeof SocialName, any> = {
   messenger: MessengerIcon,
 };
 
-const Socials = ({ socials }: OwnProps): JSX.Element => (
-  <ul className="flex direction-row gap-3 md:gap-5">
+const Socials = ({ socials, className }: OwnProps): JSX.Element => (
+  <ul className={classnames("flex direction-row gap-3 md:gap-5", className)}>
     {socials?.map(({ name, url, text }) => {
       const SocialIcon = SocialIcons[name];
       return (
