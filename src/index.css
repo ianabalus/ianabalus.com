@@ -1,71 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
+@layer base {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    --color-black: 
   }
-  a:hover {
-    color: #747bff;
+}
+
+@layer utilities {
+  @keyframes animate-svg-grey {
+    0% {
+      fill: theme(colors.trasparent)
+    }
+
+    100% {
+      fill: theme(colors.grey)
+    }
   }
-  button {
-    background-color: #f9f9f9;
+
+  @keyframes animate-svg-white {
+    0% {
+      fill: theme(colors.trasparent)
+    }
+    100% {
+      fill: theme(colors.white)
+    }
+  }
+
+  .svg-element-ian {
+    animation: animate-svg-grey 1s theme(transitionTimingFunction.in-out) 0s both;
+  }
+
+  .svg-element-ian-2 {
+    animation-delay: 0.04s;
+  }
+
+  .svg-element-ian-3 {
+    animation-delay: 0.08s;
+  }
+
+  .svg-element-abalus {
+    animation: animate-svg-white 1s theme(transitionTimingFunction.in-out) 0.12s both;
+  }
+
+  .svg-element-abalus-2 {
+    animation-delay: 0.12s;
+  }
+
+  .svg-element-abalus-3 {
+    animation-delay: 0.16s;
+  }
+
+  .svg-element-abalus-4 {
+    animation-delay: 0.2s;
+  }
+
+  .svg-element-abalus-5 {
+    animation-delay: 0.24s;
+  }
+
+  .svg-element-abalus-6 {
+    animation-delay: 0.28s;
+  }
+
+  .svg-element-abalus-7 {
+    animation-delay: 0.28s;
+  }
+
+  .svg-element-abalus-8 {
+    animation-delay: 0.32s;
+  }
+
+
+  .svg-element-caret {
+    animation: animate-svg-grey 1s theme(transitionTimingFunction.in-out) 0.36s both;
+  }
+
+  .svg-element-caret-2 {
+    animation-delay: 0.4s;
+  }
+
+  .animate-h2 {
+    animation: move 500ms theme(transitionTimingFunction.in-out) 500ms both;
   }
 }
