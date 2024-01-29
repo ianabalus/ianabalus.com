@@ -9,7 +9,6 @@ function App() {
         Senior Frontend Developer
       </h2>
       <Socials
-        className="transition-move duration-500 ease-in-out-quad animate-[move_500ms_ease-in-out_750ms_both]"
         socials={[
           {
             name: "github",
@@ -27,9 +26,9 @@ function App() {
             text: "LinkedIn",
           },
           {
-            name: "messenger",
-            url: "https://m.me/ianabalus",
-            text: "Messenger",
+            name: "file",
+            url: "/files/resume-ian-abalus.pdf",
+            text: "Resume",
           },
         ]}
       />
